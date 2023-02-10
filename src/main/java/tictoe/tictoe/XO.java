@@ -111,7 +111,8 @@ class XO
 					x.initial(a);
 					x.display(a);
 					int count=0;
-				while(true)
+			 		int stop=1;
+				while(stop==1)
 				{
 					l.info("User 1:Enter the position(1-9)\n");
 					
@@ -130,19 +131,19 @@ class XO
 					int diares1=x.diagonal(a,"X");
 					int hrres1=x.horizontal(a,"X");
 					int vres1=x.vertical(a,"X");
-					if(diares1==1 || hrres1==1 ||vres1==1)
+					if(diares1==1 || hrres1==1 ||vres1==1 && stop==1)
 					{
 											
 						x.display(a);
 						l.info("Player 1 wins\n");
-						break;
+						stop=0;
 					}
-					else if(count==9)
+					else if(count==9 && stop==1)
 					{
 											
 						x.display(a);
 						l.info("Draw");
-						break;
+						stop=0;
 					}
 					l.info("User 2:Enter the position\n");
 					int u2=sin.nextInt();
@@ -160,11 +161,11 @@ class XO
 					int hrres2=x.horizontal(a,"O");
 					int vres2=x.vertical(a,"O");
 					
-					if(diares2==1 || hrres2==1 ||vres2==1)
+					if(diares2==1 || hrres2==1 ||vres2==1 && stop==1)
 					{
 						x.display(a);
 						l.info("Player 2 wins\n");
-						break;
+						stop=0;
 					}
 					x.display(a);
 				}
