@@ -126,10 +126,10 @@ class XO
 						
 					
 					
-					int diares1,hrres1,vres1;
-					diares1=x.diagonal(a,"X");
-					hrres1=x.horizontal(a,"X");
-					vres1=x.vertical(a,"X");
+					
+					int diares1=x.diagonal(a,"X");
+					int hrres1=x.horizontal(a,"X");
+					int vres1=x.vertical(a,"X");
 					if(diares1==1 || hrres1==1 ||vres1==1)
 					{
 											
@@ -155,10 +155,10 @@ class XO
 							count+=1;
 						
 					
-					int diares2,hrres2,vres2;
-					diares2=x.diagonal(a,"O");
-					hrres2=x.horizontal(a,"O");
-					vres2=x.vertical(a,"O");
+					
+					int diares2=x.diagonal(a,"O");
+					int hrres2=x.horizontal(a,"O");
+					int vres2=x.vertical(a,"O");
 					
 					if(diares2==1 || hrres2==1 ||vres2==1)
 					{
