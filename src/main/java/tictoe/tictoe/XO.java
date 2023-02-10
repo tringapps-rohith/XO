@@ -119,22 +119,13 @@ class XO
 					
 					int i1=(u1-1)/3;
 					int j1=(u1-1)%3;
-					if(u1>=1 && u1<=9 &&a[i1][j1]=="_" )
-					{
+					
 						
 							a[i1][j1]="X";
 							count+=1;
 						
-					}
-					else
-					{
-						l.info("You entered wrong position, Enter correct position\n");
-						u1=sin.nextInt();
-						i1=(u1-1)/3;
-					    j1=(u1-1)%3;
-						a[i1][j1]="X";
-						count+=1;
-					}
+					
+					
 					int diares1,hrres1,vres1;
 					diares1=x.diagonal(a,"X");
 					hrres1=x.horizontal(a,"X");
@@ -158,22 +149,12 @@ class XO
 					
 					int i2=(u2-1)/3;
 					int j2=(u2-1)%3;
-					if(a[i2][j2]=="_" && u2>=1 && u2<=9)
-					{
+					
 						
 							a[i2][j2]="O";
 							count+=1;
 						
-					}
-					else
-					{
-						l.info("You entered wrong position, Enter correct position\n");
-						u2=sin.nextInt();
-						i2=(u2-1)/3;
-					    j2=(u2-1)%3;
-						a[i2][j2]="O";
-						count+=1;
-					}
+					
 					int diares2,hrres2,vres2;
 					diares2=x.diagonal(a,"O");
 					hrres2=x.horizontal(a,"O");
