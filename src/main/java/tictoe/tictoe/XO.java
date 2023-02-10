@@ -31,15 +31,16 @@ class XO
 		}
 		int diagonal(String [][]a,String sym)
 		{
-			int count1=0,count2=0;
+			int count1=0;
+			int count2=0;
 			
 				for(int i=0;i<3;i++)
 				{
-					if(a[i][i]==sym)
+					if(a[i][i].equals(sym))
 					{	
 						count1++;
 					}
-					if(a[i][2-i]==sym)
+					if(a[i][2-i].equals(sym))
 					{
 						count2++;
 					}
@@ -60,7 +61,7 @@ class XO
 				count1=0;
 				for(int j=0;j<3;j++)
 				{
-					if(a[i][j]==sym &&count1<3)
+					if(a[i][j].equals(sym) &&count1<3)
 					{
 						count1++;
 						if(count1==3)
@@ -84,7 +85,7 @@ class XO
 				count1=0;
 				for(int j=0;j<3;j++)
 				{
-					if(a[j][i]==sym && count1<3)
+					if(a[j][i].equals(sym) && count1<3)
 					{
 						count1++;
 						if(count1==3)
